@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		133E34F01DDDE654008D0BBC /* vidos.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 133E34EF1DDDE654008D0BBC /* vidos.MOV */; };
+		133E34F21DDDF01A008D0BBC /* CameraTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133E34F11DDDF01A008D0BBC /* CameraTestViewController.swift */; };
+		133E34F51DDDF17B008D0BBC /* DMCameraProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = 133E34F41DDDF17B008D0BBC /* DMCameraProcessing.mm */; };
 		13612ACC1DC386F3009C5F16 /* ImageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13612ACB1DC386F3009C5F16 /* ImageTestViewController.swift */; };
 		139D4CD31DD4BA2B00F3B04A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CD95591DCCB70800A6241E /* AssetsLibrary.framework */; };
 		139D4CD51DD4BACE00F3B04A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */; };
@@ -59,6 +61,9 @@
 
 /* Begin PBXFileReference section */
 		133E34EF1DDDE654008D0BBC /* vidos.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = vidos.MOV; path = ../../vidos.MOV; sourceTree = "<group>"; };
+		133E34F11DDDF01A008D0BBC /* CameraTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTestViewController.swift; sourceTree = "<group>"; };
+		133E34F31DDDF165008D0BBC /* DMCameraProcessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMCameraProcessing.h; sourceTree = "<group>"; };
+		133E34F41DDDF17B008D0BBC /* DMCameraProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DMCameraProcessing.mm; sourceTree = "<group>"; };
 		13612ACB1DC386F3009C5F16 /* ImageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTestViewController.swift; sourceTree = "<group>"; };
 		139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		139D4CD61DD4BB2100F3B04A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				13612ACB1DC386F3009C5F16 /* ImageTestViewController.swift */,
+				133E34F11DDDF01A008D0BBC /* CameraTestViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +214,8 @@
 			children = (
 				A0DB750E1DC369C400FE16C6 /* DMImageProcessing.h */,
 				A0DB750F1DC369C400FE16C6 /* DMImageProcessing.mm */,
+				133E34F31DDDF165008D0BBC /* DMCameraProcessing.h */,
+				133E34F41DDDF17B008D0BBC /* DMCameraProcessing.mm */,
 			);
 			name = DMProccessing;
 			sourceTree = "<group>";
@@ -443,7 +451,9 @@
 			files = (
 				13612ACC1DC386F3009C5F16 /* ImageTestViewController.swift in Sources */,
 				B58E1DB21DC39ACE00D5A133 /* Extensions.swift in Sources */,
+				133E34F21DDDF01A008D0BBC /* CameraTestViewController.swift in Sources */,
 				A0DB75101DC369C400FE16C6 /* DMImageProcessing.mm in Sources */,
+				133E34F51DDDF17B008D0BBC /* DMCameraProcessing.mm in Sources */,
 				A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

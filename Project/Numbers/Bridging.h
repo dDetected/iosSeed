@@ -4,3 +4,5 @@
 
 #import "DMImageProcessing.h"
 #import "DMCameraProcessing.h"
+#import "DMVideoProcessing.h"
+#import "DMCaptureCamera.h"

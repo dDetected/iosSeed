@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mAW-OX-W3N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ar3-zP-euc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,7 +70,57 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="194" y="1014"/>
+            <point key="canvasLocation" x="1022" y="1852"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BtU-MU-2nc">
+            <objects>
+                <navigationController id="mmg-iy-UDX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lge-ZB-C1A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pAF-Nf-mSw" kind="relationship" relationship="rootViewController" id="Rcc-6w-2uT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sqd-Qi-9cJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1022" y="2713"/>
+        </scene>
+        <!--Video Test View Controller-->
+        <scene sceneID="XmD-EG-scI">
+            <objects>
+                <viewController id="pAF-Nf-mSw" customClass="VideoTestViewController" customModule="Numbers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eoY-O0-3cn"/>
+                        <viewControllerLayoutGuide type="bottom" id="LYb-u6-CLH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DqW-SS-Ho4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-Yv-m6z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="1" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bVg-Yv-m6z" firstAttribute="leading" secondItem="DqW-SS-Ho4" secondAttribute="leadingMargin" constant="-16" id="KEw-X4-DFQ"/>
+                            <constraint firstItem="LYb-u6-CLH" firstAttribute="top" secondItem="bVg-Yv-m6z" secondAttribute="bottom" id="Yn6-i5-xeR"/>
+                            <constraint firstItem="bVg-Yv-m6z" firstAttribute="top" secondItem="eoY-O0-3cn" secondAttribute="bottom" id="dAN-uh-wNz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bVg-Yv-m6z" secondAttribute="trailing" constant="-16" id="mtN-Nr-pNd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HZY-xz-5Xc"/>
+                    <connections>
+                        <outlet property="outputview" destination="bVg-Yv-m6z" id="Aj8-Cd-8vz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGh-ew-HcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.5999999999999" y="2712.5937031484259"/>
         </scene>
         <!--Camera Test View Controller-->
         <scene sceneID="K7N-wa-OJC">
@@ -103,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcx-TP-yzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.8000000000002" y="1042.128935532234"/>
+            <point key="canvasLocation" x="3458" y="1881"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vJg-Yh-4LD">
@@ -121,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDy-yg-ObV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405.5999999999999" y="1042.128935532234"/>
+            <point key="canvasLocation" x="2238" y="1882"/>
         </scene>
     </scenes>
 </document>

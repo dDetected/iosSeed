@@ -13,7 +13,7 @@
 #import <opencv2/text.hpp>
 #import <opencv2/imgcodecs/ios.h>
 #import <opencv2/objdetect/objdetect.hpp>
-
+#import <opencv2/dpm.hpp>
 
 
 using namespace std;
@@ -30,99 +30,51 @@ struct mysort {
     Mat src;
     UIImageToMat(srcImage, src, true);
     
-    cv::String resourcePath = cv::String(path.UTF8String);
-    cv::String haarPath = resourcePath + "/haar_plate.xml";
-    CascadeClassifier haar = CascadeClassifier(haarPath);
-    std::vector<cv::Rect> plates;
-    haar.detectMultiScale(src, plates, 1.2, 6, 1);
+    Mat resized;
+    resize(src, resized, cv::Size(160, 213));
     
-    if(plates.size() > 0){
-        Mat plate;
-        src(plates[0]).copyTo(plate);
-        
-        Mat grayPlate;
-        cvtColor(plate, grayPlate, COLOR_BGR2GRAY);
-        Mat blurPlate;
-        
-        //GaussianBlur(grayPlate, blurPlate, cv::Size(3,3), 0);
-        Mat binPlate;
-        //threshold(grayPlate, binPlate, 0, 255, THRESH_BINARY | THRESH_OTSU);
-        adaptiveThreshold(grayPlate, binPlate, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 11, 2);
-        
-        //load classifier
-        cv::String nm1Path = resourcePath + "/trained_classifierNM1.xml";
-        cv::String nm2Path = resourcePath + "/trained_classifierNM2.xml";
-        
-        std::vector<vector<cv::Point>> characters;
-        Ptr<ERFilter> nm1 = createERFilterNM1(loadClassifierNM1(nm1Path));
-        Ptr<ERFilter> nm2 = createERFilterNM2(loadClassifierNM2(nm2Path));
-        cv::text::detectRegions(binPlate, nm1, nm2, characters);
-        
-        std::vector<cv::Rect> bounding;
-        for(int i = 0; i < characters.size(); i++){
-            cv::Rect boundBox = boundingRect(characters[i]);
-            if(boundBox.width * boundBox.height > 70){
-                bounding.push_back(boundBox);
-                rectangle(plate, boundBox, Scalar(255, 100, 100));
-            }
-        }
-        
-        sort(bounding.begin(), bounding.end(), myobject);
-        
-        //for all bounding rects launch tesseract
-        G8Tesseract *tesseract = [[G8Tesseract alloc]initWithLanguage:@"eng"];
-        [tesseract setPageSegmentationMode:G8PageSegmentationModeSingleChar];
-        NSMutableString *strResult = [NSMutableString string];
-        
-        for(int i = 0; i < bounding.size(); i++) {
-            cv::Rect r = bounding[i];
-            if(r.x > 0){
-                r.x -= 1;
-                
-                r.width += 1;
-            }
-            if(r.y > 0){
-                r.y -= 1;
-                r.height += 1;
-            }
+    Mat srcBGR;
+    
+    cvtColor(resized, srcBGR, COLOR_BGRA2BGR);
+//    Mat srcConv;
+//    src.convertTo(srcConv, CV_64F);
+    
 
-            Mat box;
-            binPlate(r).copyTo(box);
-            UIImage* letter = MatToUIImage(box);
-            if(i == 0 || i == 4 || i == 5){
-                tesseract.charWhitelist = @"etuopahkxcbmETUOPAHKYXCBM";
-            }else{
-                tesseract.charWhitelist = @"1234567890";
-            }
-            tesseract.image = letter;
-            [tesseract recognize];
-            NSString* text = tesseract.recognizedText;
-            if(text != nil && text.length > 0){
-                [strResult appendString:[text substringToIndex:1]];
-            }
-        }
-         NSLog(strResult);
-        
-        
-        
-        return MatToUIImage(plate);
+//    int channells = src.channels();
+//    int depth = src.depth();
+//    int cv64 = CV_64F;
+    Mat srcCopy;
+    srcBGR.copyTo(srcCopy);
+    cv::String resourcePath = cv::String(path.UTF8String);
+    cv::String carDPMpath = resourcePath + "/car.xml";
+//
+    std::vector<std::string> filenames(1,carDPMpath);
+//    filenames.push_back();
+//
+    Ptr<dpm::DPMDetector> detectorptr =dpm::DPMDetector::create(filenames);
+    dpm::DPMDetector* detector = detectorptr.get();
+//
+    vector<dpm::DPMDetector::ObjectDetection> results;
+//
+    detector->detect(srcCopy, results);
+//
+    int size = results.size();
+    for(int i = 0; i < size; i++){
+        dpm::DPMDetector::ObjectDetection car = results[i];
+//        if(car.score > -0.5){
+            rectangle(srcBGR, car.rect, Scalar(100, 100, 255));
+//        }
+        NSLog(@"score %f", car.score);
     }
+
     
-    return MatToUIImage(src);
+    return MatToUIImage(srcBGR);
 }
 
 
 
 - (NSString*)extractText:(UIImage*)srcImage{
-    
-    G8Tesseract *tesseract = [[G8Tesseract alloc]initWithLanguage:@"eng"];
-    tesseract.charWhitelist = @"1234567890ETUOPAHKXCBM";
-    tesseract.image = [srcImage g8_blackAndWhite];
-    [tesseract recognize];
-    
-    return tesseract.recognizedText;
-
-    
+    return @"closed1";
 }
 
 @end

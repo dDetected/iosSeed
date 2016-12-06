@@ -20,6 +20,7 @@
 		13CD95581DCCB40A00A6241E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CD95571DCCB40A00A6241E /* opencv2.framework */; };
 		13CD955C1DCCC49D00A6241E /* trained_classifierNM1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */; };
 		13CD955E1DCCC4A500A6241E /* trained_classifierNM2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */; };
+		13CF61DB1DF6DC2A00911627 /* car.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CF61DA1DF6DC2A00911627 /* car.xml */; };
 		13E402F31DC9204A007819B4 /* haar_plate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13E402F21DC9204A007819B4 /* haar_plate.xml */; };
 		20A8F00FEB80991CA898BACB /* Pods_Numbers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86E2AAA629370DAFD7DB490 /* Pods_Numbers.framework */; };
 		A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74CB1DC34EF900FE16C6 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		13CD95591DCCB70800A6241E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM1.xml; sourceTree = "<group>"; };
 		13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM2.xml; sourceTree = "<group>"; };
+		13CF61DA1DF6DC2A00911627 /* car.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = car.xml; sourceTree = "<group>"; };
 		13E402F21DC9204A007819B4 /* haar_plate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haar_plate.xml; sourceTree = "<group>"; };
 		3223D50AB4C8781F729E06D1 /* Pods-Numbers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.debug.xcconfig"; sourceTree = "<group>"; };
 		9006FC3CC146A2EFA9A4ADBB /* Pods-Numbers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 		A0DB74FD1DC355BC00FE16C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				13CF61DA1DF6DC2A00911627 /* car.xml */,
 				133E34EF1DDDE654008D0BBC /* vidos.MOV */,
 				13E402F21DC9204A007819B4 /* haar_plate.xml */,
 				13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */,
@@ -373,6 +376,7 @@
 				13E402F31DC9204A007819B4 /* haar_plate.xml in Resources */,
 				133E34F01DDDE654008D0BBC /* vidos.MOV in Resources */,
 				A0DB74D61DC34EF900FE16C6 /* LaunchScreen.storyboard in Resources */,
+				13CF61DB1DF6DC2A00911627 /* car.xml in Resources */,
 				A0DB74D31DC34EF900FE16C6 /* Assets.xcassets in Resources */,
 				13CD955C1DCCC49D00A6241E /* trained_classifierNM1.xml in Resources */,
 				A0DB74D11DC34EF900FE16C6 /* Main.storyboard in Resources */,

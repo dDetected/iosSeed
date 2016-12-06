@@ -36,7 +36,7 @@ class ImageTestViewController : UIViewController {
     }
     
     func showImage(n : Int) {
-        let srcImage = UIImage(named: "car\(n%11)")
+        let srcImage = UIImage(named: "car\(n%44)")
         src.image = srcImage
         let start = CFAbsoluteTimeGetCurrent()
         let out : UIImage? = processing.findPlate(srcImage, withResourcePath: Bundle.main.resourcePath)

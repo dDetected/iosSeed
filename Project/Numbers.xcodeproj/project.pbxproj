@@ -20,6 +20,10 @@
 		13CD95581DCCB40A00A6241E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CD95571DCCB40A00A6241E /* opencv2.framework */; };
 		13CD955C1DCCC49D00A6241E /* trained_classifierNM1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */; };
 		13CD955E1DCCC4A500A6241E /* trained_classifierNM2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */; };
+		13CF61E31DF8591C00911627 /* cas1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CF61DE1DF8591C00911627 /* cas1.xml */; };
+		13CF61E41DF8591C00911627 /* cas2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CF61DF1DF8591C00911627 /* cas2.xml */; };
+		13CF61E51DF8591C00911627 /* cas3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CF61E01DF8591C00911627 /* cas3.xml */; };
+		13CF61E71DF8591C00911627 /* checkcas.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CF61E21DF8591C00911627 /* checkcas.xml */; };
 		13E402F31DC9204A007819B4 /* haar_plate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13E402F21DC9204A007819B4 /* haar_plate.xml */; };
 		20A8F00FEB80991CA898BACB /* Pods_Numbers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86E2AAA629370DAFD7DB490 /* Pods_Numbers.framework */; };
 		A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74CB1DC34EF900FE16C6 /* AppDelegate.swift */; };
@@ -79,6 +83,10 @@
 		13CD95591DCCB70800A6241E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM1.xml; sourceTree = "<group>"; };
 		13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM2.xml; sourceTree = "<group>"; };
+		13CF61DE1DF8591C00911627 /* cas1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cas1.xml; sourceTree = "<group>"; };
+		13CF61DF1DF8591C00911627 /* cas2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cas2.xml; sourceTree = "<group>"; };
+		13CF61E01DF8591C00911627 /* cas3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = cas3.xml; sourceTree = "<group>"; };
+		13CF61E21DF8591C00911627 /* checkcas.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = checkcas.xml; sourceTree = "<group>"; };
 		13E402F21DC9204A007819B4 /* haar_plate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haar_plate.xml; sourceTree = "<group>"; };
 		3223D50AB4C8781F729E06D1 /* Pods-Numbers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.debug.xcconfig"; sourceTree = "<group>"; };
 		9006FC3CC146A2EFA9A4ADBB /* Pods-Numbers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				133E34EF1DDDE654008D0BBC /* vidos.MOV */,
+				13CF61DE1DF8591C00911627 /* cas1.xml */,
+				13CF61DF1DF8591C00911627 /* cas2.xml */,
+				13CF61E01DF8591C00911627 /* cas3.xml */,
+				13CF61E21DF8591C00911627 /* checkcas.xml */,
 				13E402F21DC9204A007819B4 /* haar_plate.xml */,
 				13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */,
 				13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */,
@@ -370,9 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13CD955E1DCCC4A500A6241E /* trained_classifierNM2.xml in Resources */,
+				13CF61E71DF8591C00911627 /* checkcas.xml in Resources */,
 				13E402F31DC9204A007819B4 /* haar_plate.xml in Resources */,
 				133E34F01DDDE654008D0BBC /* vidos.MOV in Resources */,
+				13CF61E31DF8591C00911627 /* cas1.xml in Resources */,
+				13CF61E51DF8591C00911627 /* cas3.xml in Resources */,
 				A0DB74D61DC34EF900FE16C6 /* LaunchScreen.storyboard in Resources */,
+				13CF61E41DF8591C00911627 /* cas2.xml in Resources */,
 				A0DB74D31DC34EF900FE16C6 /* Assets.xcassets in Resources */,
 				13CD955C1DCCC49D00A6241E /* trained_classifierNM1.xml in Resources */,
 				A0DB74D11DC34EF900FE16C6 /* Main.storyboard in Resources */,

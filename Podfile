@@ -9,6 +9,7 @@ target 'Numbers' do
 
   pod 'SDWebImage'
   pod 'TesseractOCRiOS'
+  pod 'GPUImage'  
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|

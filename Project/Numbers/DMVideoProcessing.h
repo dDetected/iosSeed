@@ -6,12 +6,14 @@
 //  Copyright © 2016 Anton Spivak. All rights reserved.
 //
 
+#import <GPUImage/GPUImage.h>
+
 #ifndef DMVideoProcessing_h
 #define DMVideoProcessing_h
 
 @interface DMVideoProcessing : NSObject
 
-- (instancetype _Nonnull)initWithOutputImageView:(UIImageView * _Nonnull)imageView;
+- (instancetype _Nonnull)initWithOutputImageView:(GPUImageView * _Nonnull)imageView;
 
 - (void)start;
 - (void)stop;

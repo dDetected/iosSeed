@@ -13,6 +13,8 @@
 #import <opencv2/videoio/cap_ios.h>
 #import <opencv2/imgproc/imgproc.hpp>
 
+#import <GPUImage/GPUImage.h>
+
 using namespace cv;
 
 //////////
@@ -31,45 +33,51 @@ using namespace cv;
 
 //////////
 
-@interface DMVideoProcessing () <CvVideoCameraDelegate>
+@interface DMVideoProcessing () <GPUImageMovieDelegate>
 
-@property (strong, nonatomic) DMVideoCamera *camera;
+@property (strong, nonatomic) GPUImageMovie *movie;
+@property (strong, nonatomic) GPUImageBrightnessFilter *filter;
 
 @end
 
 
 @implementation DMVideoProcessing
 
-- (instancetype)initWithOutputImageView:(UIImageView *)imageView {
+- (instancetype)initWithOutputImageView:(GPUImageView *)imageView {
     if (self == [super init]) {
-        self.camera = [[DMVideoCamera alloc] initWithParentView:imageView];
-        self.camera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionBack;
-        self.camera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset1920x1080;
-        self.camera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
-        self.camera.defaultFPS = 30;
-        self.camera.grayscaleMode = NO;
-        self.camera.delegate = self;        
+        NSURL *videoURL = [[NSBundle mainBundle] URLForResource:@"vidos" withExtension:@"MOV"];
+        
+        self.movie = [[GPUImageMovie alloc] initWithURL:videoURL];
+        self.movie.delegate = self;
+        self.movie.shouldRepeat = YES;
+        self.movie.playAtActualSpeed = YES;
+        
+        self.filter = [[GPUImageBrightnessFilter alloc] init];
+        [self.filter setInputRotation:kGPUImageRotateRight atIndex:0];
+        self.filter.brightness = 0.0;
+        
+        [self.movie addTarget:self.filter];
+        [self.filter addTarget: imageView];
     }
     return self;
 }
 
 - (void)start {
-    [self.camera start];
+    [self.movie startProcessing];
 }
 
 - (void)stop {
-    [self.camera stop];
+    
 }
 
 #pragma mark - CvVideoCameraDelegate
 
-- (void)processImage:(cv::Mat &)image {
-    static int i = 0;
-    if(i % 5 == 0){
-        rectangle(image, cv::Rect(200, 500, 400, 300), cv::Scalar(255, 100, 100), 5);
-    }
+- (void)didCompletePlayingMovie{
     
-    i += 1;
+}
+
+- (void)processImage:(cv::Mat &)image {
+
 }
 
 @end

@@ -9,7 +9,8 @@ target 'Numbers' do
 
   pod 'SDWebImage'
   pod 'TesseractOCRiOS'
-  
+  pod 'OpenCV'
+
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       if target.to_s == "TesseractOCRiOS"

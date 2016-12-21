@@ -12,7 +12,8 @@
 
 @interface DMImageProcessing : NSObject
 
+- (instancetype)initWithOuputImageFrame:(CGRect)frame;
 - (UIImage *)findPlate:(UIImage*)srcImage withResourcePath:(NSString*) path;
-- (NSString*)extractText:(UIImage*)srcImage;
+
 
 @end

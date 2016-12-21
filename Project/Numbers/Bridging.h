@@ -3,3 +3,4 @@
 //
 
 #import "DMImageProcessing.h"
+#import "OpenCVFilter.h"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130DDACC1E0A9D7C006F459B /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130DDACB1E0A9D7C006F459B /* CameraController.swift */; };
+		130DDAD11E0A9FB9006F459B /* OpenCVFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */; };
 		13612ACC1DC386F3009C5F16 /* CVTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */; };
 		139D4CD31DD4BA2B00F3B04A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CD95591DCCB70800A6241E /* AssetsLibrary.framework */; };
 		139D4CD51DD4BACE00F3B04A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */; };
@@ -15,7 +17,6 @@
 		13CD955C1DCCC49D00A6241E /* trained_classifierNM1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */; };
 		13CD955E1DCCC4A500A6241E /* trained_classifierNM2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */; };
 		13E402F31DC9204A007819B4 /* haar_plate.xml in Resources */ = {isa = PBXBuildFile; fileRef = 13E402F21DC9204A007819B4 /* haar_plate.xml */; };
-		13E402F51DC9F299007819B4 /* TesseractTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E402F41DC9F299007819B4 /* TesseractTestViewController.swift */; };
 		20A8F00FEB80991CA898BACB /* Pods_Numbers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86E2AAA629370DAFD7DB490 /* Pods_Numbers.framework */; };
 		A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74CB1DC34EF900FE16C6 /* AppDelegate.swift */; };
 		A0DB74D11DC34EF900FE16C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DB74CF1DC34EF900FE16C6 /* Main.storyboard */; };
@@ -23,8 +24,6 @@
 		A0DB74D61DC34EF900FE16C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DB74D41DC34EF900FE16C6 /* LaunchScreen.storyboard */; };
 		A0DB74E11DC34EF900FE16C6 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74E01DC34EF900FE16C6 /* NumbersTests.swift */; };
 		A0DB74EC1DC34EF900FE16C6 /* NumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74EB1DC34EF900FE16C6 /* NumbersUITests.swift */; };
-		A0DB750B1DC3695C00FE16C6 /* eng.traineddata in Tessdata */ = {isa = PBXBuildFile; fileRef = A0DB75061DC3692A00FE16C6 /* eng.traineddata */; };
-		A0DB750C1DC3695C00FE16C6 /* rus.traineddata in Tessdata */ = {isa = PBXBuildFile; fileRef = A0DB75071DC3692A00FE16C6 /* rus.traineddata */; };
 		A0DB75101DC369C400FE16C6 /* DMImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0DB750F1DC369C400FE16C6 /* DMImageProcessing.mm */; };
 		B58E1DB21DC39ACE00D5A133 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E1DB11DC39ACE00D5A133 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -53,8 +52,6 @@
 			dstPath = tessdata;
 			dstSubfolderSpec = 7;
 			files = (
-				A0DB750B1DC3695C00FE16C6 /* eng.traineddata in Tessdata */,
-				A0DB750C1DC3695C00FE16C6 /* rus.traineddata in Tessdata */,
 			);
 			name = Tessdata;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		130DDACB1E0A9D7C006F459B /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		130DDACF1E0A9F58006F459B /* OpenCVFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVFilter.h; sourceTree = "<group>"; };
+		130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCVFilter.m; sourceTree = "<group>"; };
 		13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVTestViewController.swift; sourceTree = "<group>"; };
 		139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		139D4CD61DD4BB2100F3B04A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -70,7 +70,6 @@
 		13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM1.xml; sourceTree = "<group>"; };
 		13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = trained_classifierNM2.xml; sourceTree = "<group>"; };
 		13E402F21DC9204A007819B4 /* haar_plate.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haar_plate.xml; sourceTree = "<group>"; };
-		13E402F41DC9F299007819B4 /* TesseractTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TesseractTestViewController.swift; sourceTree = "<group>"; };
 		3223D50AB4C8781F729E06D1 /* Pods-Numbers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.debug.xcconfig"; sourceTree = "<group>"; };
 		9006FC3CC146A2EFA9A4ADBB /* Pods-Numbers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Numbers.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Numbers/Pods-Numbers.release.xcconfig"; sourceTree = "<group>"; };
 		A0DB74C81DC34EF900FE16C6 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +84,6 @@
 		A0DB74E71DC34EF900FE16C6 /* NumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DB74EB1DC34EF900FE16C6 /* NumbersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUITests.swift; sourceTree = "<group>"; };
 		A0DB74ED1DC34EF900FE16C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0DB75061DC3692A00FE16C6 /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
-		A0DB75071DC3692A00FE16C6 /* rus.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = rus.traineddata; sourceTree = "<group>"; };
 		A0DB750D1DC369C300FE16C6 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		A0DB750E1DC369C400FE16C6 /* DMImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageProcessing.h; sourceTree = "<group>"; };
 		A0DB750F1DC369C400FE16C6 /* DMImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DMImageProcessing.mm; sourceTree = "<group>"; };
@@ -166,8 +163,9 @@
 				A0DB74CF1DC34EF900FE16C6 /* Main.storyboard */,
 				B58E1DB11DC39ACE00D5A133 /* Extensions.swift */,
 				A0DB74FE1DC355CA00FE16C6 /* Controllers */,
-				A0DB75041DC368BA00FE16C6 /* tessdata */,
 				A0DB74FD1DC355BC00FE16C6 /* Resources */,
+				130DDACF1E0A9F58006F459B /* OpenCVFilter.h */,
+				130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */,
 			);
 			path = Numbers;
 			sourceTree = "<group>";
@@ -205,18 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */,
-				13E402F41DC9F299007819B4 /* TesseractTestViewController.swift */,
+				130DDACB1E0A9D7C006F459B /* CameraController.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		A0DB75041DC368BA00FE16C6 /* tessdata */ = {
-			isa = PBXGroup;
-			children = (
-				A0DB75061DC3692A00FE16C6 /* eng.traineddata */,
-				A0DB75071DC3692A00FE16C6 /* rus.traineddata */,
-			);
-			name = tessdata;
 			sourceTree = "<group>";
 		};
 		A0DB75111DC369C900FE16C6 /* DMProccessing */ = {
@@ -459,8 +448,9 @@
 				13612ACC1DC386F3009C5F16 /* CVTestViewController.swift in Sources */,
 				B58E1DB21DC39ACE00D5A133 /* Extensions.swift in Sources */,
 				A0DB75101DC369C400FE16C6 /* DMImageProcessing.mm in Sources */,
-				13E402F51DC9F299007819B4 /* TesseractTestViewController.swift in Sources */,
 				A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */,
+				130DDAD11E0A9FB9006F459B /* OpenCVFilter.m in Sources */,
+				130DDACC1E0A9D7C006F459B /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

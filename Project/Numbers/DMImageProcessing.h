@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <opencv2/core/core_c.h>
 #import <UIKit/UIKit.h>
 
 @interface DMImageProcessing : NSObject
 
 - (instancetype)initWithOuputImageFrame:(CGRect)frame;
 - (UIImage *)findPlate:(UIImage*)srcImage withResourcePath:(NSString*) path;
+- (void)processImageBuffer:(CVImageBufferRef _Nonnull)buffer withBlock:(void(^ _Nullable)(void))block;
 
 
 @end

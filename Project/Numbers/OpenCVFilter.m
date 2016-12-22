@@ -79,12 +79,12 @@
             
             __weak typeof(self) welf = self;
             dispatch_async(_processingQueue, ^{
-                //[self.processing processImageBuffer:bufferCopy withBlock:^{
-                //    welf.isBusy = NO;
+                [self.processing processImageBuffer:bufferCopy withBlock:^{
+                    welf.isBusy = NO;
                     
                     CVPixelBufferUnlockBaseAddress(bufferCopy, 0);
                     CVPixelBufferRelease(bufferCopy);
-                //}];
+                }];
             });
         }
         
@@ -97,8 +97,6 @@
     if (usingNextFrameForImageCapture) {
         dispatch_semaphore_signal(imageCaptureSemaphore);
     }
-
-    
 }
 
 @end

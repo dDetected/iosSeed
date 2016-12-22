@@ -9,5 +9,13 @@
 #ifndef OpenCVFilter_h
 #define OpenCVFilter_h
 
+#import <GPUImage/GPUImage.h>
+
+@interface OpenCVFilter : GPUImageFilter
+
+
+
+@end
+
 
 #endif /* OpenCVFilter_h */

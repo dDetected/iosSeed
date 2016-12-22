@@ -12,6 +12,7 @@ import GPUImage
 
 class CameraController : UIViewController {
     @IBOutlet weak var cameraView: GPUImageView!
+    @IBOutlet weak var plate0: UIView!
     
     var camera : GPUImageVideoCamera!
     let opencvFilter = OpenCVFilter()
@@ -24,6 +25,8 @@ class CameraController : UIViewController {
         self.camera.addTarget(opencvFilter)
         
         self.opencvFilter.addTarget(cameraView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateCarRegion(notification:)), name: NSNotification.Name(rawValue: "plate0"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,5 +40,12 @@ class CameraController : UIViewController {
         
         camera.stopCapture()
     }
+    
+    func updateCarRegion(notification : Notification){
+        if let frame = notification.userInfo?["rect"] as? NSValue {
+            self.plate0.frame = frame.cgRectValue
+        }
+    }
+    
     
 }

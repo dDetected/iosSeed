@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130DDACC1E0A9D7C006F459B /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130DDACB1E0A9D7C006F459B /* CameraController.swift */; };
-		130DDAD11E0A9FB9006F459B /* OpenCVFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */; };
-		13612ACC1DC386F3009C5F16 /* CVTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */; };
+		130DDAD11E0A9FB9006F459B /* OpenCVFilter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 130DDAD01E0A9FB9006F459B /* OpenCVFilter.mm */; };
 		139D4CD31DD4BA2B00F3B04A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CD95591DCCB70800A6241E /* AssetsLibrary.framework */; };
 		139D4CD51DD4BACE00F3B04A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */; };
 		139D4CD71DD4BB2100F3B04A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139D4CD61DD4BB2100F3B04A /* CoreMedia.framework */; };
@@ -25,7 +24,6 @@
 		A0DB74E11DC34EF900FE16C6 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74E01DC34EF900FE16C6 /* NumbersTests.swift */; };
 		A0DB74EC1DC34EF900FE16C6 /* NumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB74EB1DC34EF900FE16C6 /* NumbersUITests.swift */; };
 		A0DB75101DC369C400FE16C6 /* DMImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0DB750F1DC369C400FE16C6 /* DMImageProcessing.mm */; };
-		B58E1DB21DC39ACE00D5A133 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58E1DB11DC39ACE00D5A133 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +59,7 @@
 /* Begin PBXFileReference section */
 		130DDACB1E0A9D7C006F459B /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		130DDACF1E0A9F58006F459B /* OpenCVFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVFilter.h; sourceTree = "<group>"; };
-		130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCVFilter.m; sourceTree = "<group>"; };
-		13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVTestViewController.swift; sourceTree = "<group>"; };
+		130DDAD01E0A9FB9006F459B /* OpenCVFilter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVFilter.mm; sourceTree = "<group>"; };
 		139D4CD41DD4BACE00F3B04A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		139D4CD61DD4BB2100F3B04A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		13CD95571DCCB40A00A6241E /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 		A0DB750D1DC369C300FE16C6 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
 		A0DB750E1DC369C400FE16C6 /* DMImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageProcessing.h; sourceTree = "<group>"; };
 		A0DB750F1DC369C400FE16C6 /* DMImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DMImageProcessing.mm; sourceTree = "<group>"; };
-		B58E1DB11DC39ACE00D5A133 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E86E2AAA629370DAFD7DB490 /* Pods_Numbers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Numbers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +129,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A041AA5B1E2645E700FA8BB4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A0DB75111DC369C900FE16C6 /* DMProccessing */,
+				130DDACF1E0A9F58006F459B /* OpenCVFilter.h */,
+				130DDAD01E0A9FB9006F459B /* OpenCVFilter.mm */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		A0DB74BF1DC34EF900FE16C6 = {
 			isa = PBXGroup;
 			children = (
@@ -158,14 +164,11 @@
 		A0DB74CA1DC34EF900FE16C6 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
-				A0DB75111DC369C900FE16C6 /* DMProccessing */,
 				A0DB74CB1DC34EF900FE16C6 /* AppDelegate.swift */,
 				A0DB74CF1DC34EF900FE16C6 /* Main.storyboard */,
-				B58E1DB11DC39ACE00D5A133 /* Extensions.swift */,
 				A0DB74FE1DC355CA00FE16C6 /* Controllers */,
+				A041AA5B1E2645E700FA8BB4 /* Common */,
 				A0DB74FD1DC355BC00FE16C6 /* Resources */,
-				130DDACF1E0A9F58006F459B /* OpenCVFilter.h */,
-				130DDAD01E0A9FB9006F459B /* OpenCVFilter.m */,
 			);
 			path = Numbers;
 			sourceTree = "<group>";
@@ -191,10 +194,10 @@
 		A0DB74FD1DC355BC00FE16C6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B58E1DB01DC38D2300D5A133 /* Other */,
 				13E402F21DC9204A007819B4 /* haar_plate.xml */,
 				13CD955B1DCCC49D00A6241E /* trained_classifierNM1.xml */,
 				13CD955D1DCCC4A500A6241E /* trained_classifierNM2.xml */,
-				B58E1DB01DC38D2300D5A133 /* Other */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -202,7 +205,6 @@
 		A0DB74FE1DC355CA00FE16C6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				13612ACB1DC386F3009C5F16 /* CVTestViewController.swift */,
 				130DDACB1E0A9D7C006F459B /* CameraController.swift */,
 			);
 			name = Controllers;
@@ -435,7 +437,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -445,11 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13612ACC1DC386F3009C5F16 /* CVTestViewController.swift in Sources */,
-				B58E1DB21DC39ACE00D5A133 /* Extensions.swift in Sources */,
 				A0DB75101DC369C400FE16C6 /* DMImageProcessing.mm in Sources */,
 				A0DB74CC1DC34EF900FE16C6 /* AppDelegate.swift in Sources */,
-				130DDAD11E0A9FB9006F459B /* OpenCVFilter.m in Sources */,
+				130DDAD11E0A9FB9006F459B /* OpenCVFilter.mm in Sources */,
 				130DDACC1E0A9D7C006F459B /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

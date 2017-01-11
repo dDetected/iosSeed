@@ -6,16 +6,12 @@
 //  Copyright © 2016 Anton Spivak. All rights reserved.
 //
 
-#ifndef OpenCVFilter_h
-#define OpenCVFilter_h
-
+#import <Foundation/Foundation.h>
 #import <GPUImage/GPUImage.h>
+#import "DMImageProcessing.h"
 
 @interface OpenCVFilter : GPUImageFilter
 
-
+@property (strong, nonatomic) DMImageProcessing * _Nonnull processing;
 
 @end
-
-
-#endif /* OpenCVFilter_h */

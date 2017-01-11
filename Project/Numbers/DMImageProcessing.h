@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
+#import <opencv2/core/core_c.h>
+
+extern NSNotificationName _Nonnull const DMImageProcessingDidFoundPlates;
+extern NSNotificationName _Nonnull const DMImageProcessingDidLoosePlates;
+
+extern NSString *_Nonnull const DMImageProcessingInfoFramesKey;
 
 @interface DMImageProcessing : NSObject
 
-- (instancetype)initWithOuputImageFrame:(CGRect)frame;
-- (UIImage *)findPlate:(UIImage*)srcImage withResourcePath:(NSString*) path;
-- (void)processImageBuffer:(CVImageBufferRef _Nonnull)buffer withBlock:(void(^ _Nullable)(void))block;
-
+- (void)processCvMat:(CvMat)cvMat;
+- (void)processCvMat:(CvMat)cvMat withBlock:(void (^ _Nullable)())block;
 
 @end
